@@ -48,8 +48,14 @@
                             @endforeach
                         </tbody>
                     </table>
+                    <h2>Bienvenido, {{ Auth::user()->name }}</h2>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
 
-
+                        <button type="submit" class="btn btn-outline-danger btn-sm">
+                            Cerrar sesión
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
